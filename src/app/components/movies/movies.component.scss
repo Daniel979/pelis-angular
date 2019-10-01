@@ -1,77 +1,88 @@
 .titulo {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(0, 69, 126);
-    color: white;
-    text-align: center;
-    padding: .5em 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 69, 126);
+  color: white;
+  text-align: center;
+  padding: .5em 0;
 }
+
 .botonera {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(0, 69, 126);
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 69, 126);
 }
+
 .botonera-abajo {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(0, 69, 126);
-    padding-bottom: .6em;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 69, 126);
+  padding-bottom: .6em;
 }
+
 // .busqueda {
 //     display: flex;
 //     flex-direction: column;
 //     justify-self: flex-start;
 // }
-.boton{
-    background-color: rgb(0, 156, 204);
-    padding: .3em;
-    font-size: 1.1em;
+.boton {
+  background-color: rgb(0, 156, 204);
+  padding: .3em;
+  font-size: 1.1em;
 }
+
 .pagina {
-    color: white;
-    font-size: 1.1em;
-    text-align: center;
+  color: white;
+  font-size: 1.1em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.peliculas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.8em;
+  background-color: rgb(0, 69, 126);
+
+  .pelicula {
+    display: flex;
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 0.3em;
+    flex-direction: column;
+    background-color: rgb(0, 156, 204);
+    justify-content: space-between;
+
+    .tituloPelicula {
+      font-size: 1.7em;
+      padding: 0.3em;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    img {
+      padding: 0.3em;
+      border-radius: 0.3em;
+
+    }
+  }
+
+  .imgAndRating {
     display: flex;
     justify-content: center;
-}
-.peliculas{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 0.8em;
-    background-color: rgb(0, 69, 126);
-    .pelicula{
-        display: flex;
-        padding: 0.5em;
-        margin: 0.5em;
-        border-radius: 0.3em;
-        flex-direction: column;
-        background-color: rgb(0, 156, 204);
-        justify-content: space-between;
-        .tituloPelicula{
-            font-size: 1.7em;
-            padding: 0.3em;
-            display: flex;
-            justify-content: flex-start;
-        }
-        img{
-            padding: 0.3em;
-            border-radius: 0.3em;
 
-        }
+    .rating {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: darkblue;
+      font-size: 1.3em;
+      padding-left: .5em;
     }
-    .imgAndRating {
-        display: flex;
-        justify-content: center;
-        .rating {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: darkblue;
-            font-size: 1.3em;
-            padding-left: .5em;
-        }
-        .vote {
-            font-size: 1.3em;
-        }
+
+    .vote {
+      font-size: 1.3em;
     }
+  }
 }

@@ -11,7 +11,6 @@ import { CounterComponent } from './components/counter/counter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { MoviesComponent } from './components/movies/movies.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SearchComponent } from './components/search/search.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
@@ -25,7 +24,6 @@ import { HomeComponent } from './components/home/home.component';
     MoviesComponent,
     MovieDetailComponent,
     HomeComponent,
-    SpinnerComponent,
     SearchComponent,
     MovieListComponent,
   ],

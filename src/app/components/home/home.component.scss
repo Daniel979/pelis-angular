@@ -1,38 +1,10 @@
-.titulo {
+h1 {
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 69, 126);
     color: white;
     text-align: center;
-    padding: .5em 0;
-}
-.botonera {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(0, 69, 126);
-}
-.botonera-abajo {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(0, 69, 126);
-    padding-bottom: .6em;
-}
-// .busqueda {
-//     display: flex;
-//     flex-direction: column;
-//     justify-self: flex-start;
-// }
-.boton{
-    background-color: rgb(0, 156, 204);
-    padding: .3em;
-    font-size: 1.1em;
-}
-.pagina {
-    color: white;
-    font-size: 1.1em;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    padding-top: .5em;
 }
 .peliculas{
     display: grid;
@@ -47,11 +19,14 @@
         flex-direction: column;
         background-color: rgb(0, 156, 204);
         justify-content: space-between;
-        .tituloPelicula{
-            font-size: 1.7em;
+        span{
+            font-size: 1.3em;
             padding: 0.3em;
             display: flex;
             justify-content: flex-start;
+        }
+        .vote {
+            font-size: 1.4em;
         }
         img{
             padding: 0.3em;
@@ -67,11 +42,6 @@
             flex-direction: column;
             align-items: center;
             color: darkblue;
-            font-size: 1.3em;
-            padding-left: .5em;
-        }
-        .vote {
-            font-size: 1.3em;
         }
     }
 }

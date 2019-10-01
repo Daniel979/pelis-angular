@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SearchComponent } from './components/search/search.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,11 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     CounterComponent,
     HeaderComponent,
     MoviesComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    HomeComponent,
+    SpinnerComponent,
+    SearchComponent,
+    MovieListComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +36,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

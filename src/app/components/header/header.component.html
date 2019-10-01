@@ -1,13 +1,18 @@
 <header>
     <mat-toolbar class="navigation">
-        <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
-            Home
+        <!-- routerLink es para evitar que la pantalla se refresque al pinchar en el enlace -->
+        <a [routerLink]="['']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">
+            Inicio
         </a>
+        <!-- routerLinkActive aplica estilos sólo donde está activado si se pone router-link-active como valor -->
         <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">
-            Popular
+            Populares
         </a>
         <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">
-            Upcoming
+            Próximas
+        </a>
+        <a [routerLink]="['/search']" routerLinkActive="router-link-active">
+            Search
         </a>
     </mat-toolbar>
 </header>

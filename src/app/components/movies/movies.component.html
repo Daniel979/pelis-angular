@@ -1,10 +1,41 @@
+<!-- <app-movie-list [movies]="movies"></app-movie-list> -->
+<div *ngIf="category==='popular'; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <h1 class="titulo">Las más populares:</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1 class="titulo">Próximas entregas:</h1>
+</ng-template>
+<div class="botonera">
+    <button class="boton" (click)="getPrevious()">&lt; Atrás</button>
+    <p class="pagina">&nbsp;&nbsp; {{page}} &nbsp;&nbsp;</p>
+    <button class="boton" (click)="getNext()">Adelante &gt;</button>
+    
+</div>
+<!-- <div class="busqueda"><input type="text" name="search" 
+    (keyup)="searchMovies($event.target.value)" placeholder="Buscar">
+    <app-movie-list [movies]="movies"></app-movie-list>
+</div> -->
 <div class="peliculas">
 
     <div class="pelicula" *ngFor="let movie of movies">
-        <a routerLink="/movie/{{movie.id}}" routerLinkActive="router-link-active" >
-        <span>{{movie.title}}</span>
-        <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="">
-        <br>
-    </a>
+
+        <a routerLink="/movie/{{movie.id}}" routerLinkActive="router-link-active">
+            <span class="tituloPelicula">{{movie.title}}</span>
+            <div class="imgAndRating">
+                <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="">
+                <div class="rating">
+                    <span class="valoracion"> Valoración:</span>
+                    <span class="vote">{{movie.vote_average}}</span>
+                </div>
+            </div>
+        </a>
+
     </div>
+
+</div>
+<div class="botonera-abajo">
+    <button class="boton" (click)="getPrevious()">&lt; Atrás</button>
+    <p class="pagina">&nbsp;&nbsp; {{page}} &nbsp;&nbsp;</p>
+    <button class="boton" (click)="getNext()">Adelante &gt;</button>
 </div>

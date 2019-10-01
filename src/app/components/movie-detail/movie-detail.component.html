@@ -1,1 +1,10 @@
-<p>movie-detail works!</p>
+<!--<p>movie-detail works!</p>-->
+
+<div class="pelicula">
+
+    <img src="https://image.tmdb.org/t/p/w400/{{movieDetail?.poster_path}}" alt="">
+    <div class="texto">
+        <span class="title">{{movieDetail?.title}} ({{movieDetail?.vote_average}})</span>
+        <p class="overview">{{movieDetail?.overview}}</p>
+    </div>
+</div>

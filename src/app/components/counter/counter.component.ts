@@ -14,7 +14,7 @@ export class CounterComponent implements OnInit {
 
   }
   increment():void{
-    this.counter++
+    this.counter++;
   }
   decrement():void{
     this.counter--
